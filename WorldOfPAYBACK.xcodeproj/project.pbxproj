@@ -16,6 +16,8 @@
 		564C8AB22906A5E900AB5733 /* WorldOfPAYBACKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AB12906A5E900AB5733 /* WorldOfPAYBACKTests.swift */; };
 		564C8ABC2906A5E900AB5733 /* WorldOfPAYBACKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ABB2906A5E900AB5733 /* WorldOfPAYBACKUITests.swift */; };
 		564C8ABE2906A5E900AB5733 /* WorldOfPAYBACKUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ABD2906A5E900AB5733 /* WorldOfPAYBACKUITestsLaunchTests.swift */; };
+		564C8ACF2906A6D800AB5733 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ACE2906A6D800AB5733 /* NetworkHelper.swift */; };
+		564C8AD12906A82200AB5733 /* PBTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AD02906A82200AB5733 /* PBTransactions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		564C8AB72906A5E900AB5733 /* WorldOfPAYBACKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldOfPAYBACKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		564C8ABB2906A5E900AB5733 /* WorldOfPAYBACKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKUITests.swift; sourceTree = "<group>"; };
 		564C8ABD2906A5E900AB5733 /* WorldOfPAYBACKUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		564C8ACE2906A6D800AB5733 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		564C8AD02906A82200AB5733 /* PBTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTransactions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,11 @@
 		564C8A992906A5E800AB5733 /* WorldOfPAYBACK */ = {
 			isa = PBXGroup;
 			children = (
-				564C8A9A2906A5E800AB5733 /* AppDelegate.swift */,
-				564C8A9C2906A5E800AB5733 /* SceneDelegate.swift */,
-				564C8A9E2906A5E800AB5733 /* ViewController.swift */,
-				564C8AA02906A5E800AB5733 /* Main.storyboard */,
-				564C8AA32906A5E900AB5733 /* Assets.xcassets */,
-				564C8AA52906A5E900AB5733 /* LaunchScreen.storyboard */,
-				564C8AA82906A5E900AB5733 /* Info.plist */,
+				564C8ACE2906A6D800AB5733 /* NetworkHelper.swift */,
+				564C8AD02906A82200AB5733 /* PBTransactions.swift */,
+				564C8ACA2906A5FC00AB5733 /* MainViewController */,
+				564C8ACD2906A69500AB5733 /* SupportingFiles */,
+				564C8ACB2906A61100AB5733 /* Resources */,
 			);
 			path = WorldOfPAYBACK;
 			sourceTree = "<group>";
@@ -125,6 +127,34 @@
 				564C8ABD2906A5E900AB5733 /* WorldOfPAYBACKUITestsLaunchTests.swift */,
 			);
 			path = WorldOfPAYBACKUITests;
+			sourceTree = "<group>";
+		};
+		564C8ACA2906A5FC00AB5733 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				564C8AA02906A5E800AB5733 /* Main.storyboard */,
+				564C8A9E2906A5E800AB5733 /* ViewController.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		564C8ACB2906A61100AB5733 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				564C8AA82906A5E900AB5733 /* Info.plist */,
+				564C8AA32906A5E900AB5733 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		564C8ACD2906A69500AB5733 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				564C8AA52906A5E900AB5733 /* LaunchScreen.storyboard */,
+				564C8A9A2906A5E800AB5733 /* AppDelegate.swift */,
+				564C8A9C2906A5E800AB5733 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564C8ACF2906A6D800AB5733 /* NetworkHelper.swift in Sources */,
 				564C8A9F2906A5E800AB5733 /* ViewController.swift in Sources */,
 				564C8A9B2906A5E800AB5733 /* AppDelegate.swift in Sources */,
+				564C8AD12906A82200AB5733 /* PBTransactions.swift in Sources */,
 				564C8A9D2906A5E800AB5733 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
