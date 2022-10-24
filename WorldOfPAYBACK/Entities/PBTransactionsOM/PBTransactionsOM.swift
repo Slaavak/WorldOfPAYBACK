@@ -7,21 +7,19 @@
 
 import ObjectMapper
 
-public class PBTransactionsOM: Mappable {
+public class PBTransactionsOM: MappableHelper {
 
     /// Транзакции
-    public private(set) var items: [Transaction]
+    public private(set) var items: [PBTransactionOM]
 
-    required public init(map: Map) throws {
+    public required init(map: Map) throws {
         items = try map.value(Constants.items)
 
         try super.init(map: map)
     }
 
-    override public func mapping(map: Map) {
-        super.mapping(map: map)
-
-        items <- map([Constants.items], TransactionsArrayTransform())
+    public func mapping(map: Map) {
+        items <- (map[Constants.items], TransactionsArrayTransform())
     }
 
     // MARK: - Constants

@@ -7,7 +7,7 @@
 
 import ObjectMapper
 
-public class PBTransactionDetailOM: Mappable {
+public class PBTransactionDetailOM: MappableHelper {
 
     /// Описание
     public private(set) var description: String
@@ -26,7 +26,7 @@ public class PBTransactionDetailOM: Mappable {
         try super.init(map: map)
     }
 
-    override public func mapping(map: Map) {
+    public func mapping(map: Map) {
         super.mapping(map: map)
 
         description <- map[Constants.description]

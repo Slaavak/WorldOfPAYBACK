@@ -7,7 +7,7 @@
 
 import ObjectMapper
 
-public class PBAliasOM: Mappable {
+public class PBAliasOM: MappableHelper {
 
     /// Ссылка
     public private(set) var reference: String
@@ -18,7 +18,7 @@ public class PBAliasOM: Mappable {
         try super.init(map: map)
     }
 
-    override public func mapping(map: Map) {
+    public func mapping(map: Map) {
         super.mapping(map: map)
 
         reference <- map[Constants.reference]

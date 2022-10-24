@@ -7,7 +7,7 @@
 
 import ObjectMapper
 
-public class PBValueOM: Mappable {
+public class PBValueOM: MappableHelper {
 
     /// Описание
     public private(set) var amount: Int
@@ -22,7 +22,7 @@ public class PBValueOM: Mappable {
         try super.init(map: map)
     }
 
-    override public func mapping(map: Map) {
+    public func mapping(map: Map) {
         super.mapping(map: map)
 
         amount <- map[Constants.amount]

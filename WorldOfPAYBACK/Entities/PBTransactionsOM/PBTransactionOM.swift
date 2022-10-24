@@ -7,7 +7,7 @@
 
 import ObjectMapper
 
-public class PBTransactionOM: Mappable {
+public class PBTransactionOM: MappableHelper {
 
     /// Имя
     public private(set) var partnerDisplayName: String
@@ -30,7 +30,7 @@ public class PBTransactionOM: Mappable {
         try super.init(map: map)
     }
 
-    override public func mapping(map: Map) {
+    public func mapping(map: Map) {
         super.mapping(map: map)
 
         partnerDisplayName <- map[Constants.partnerDisplayName]
@@ -48,8 +48,3 @@ public class PBTransactionOM: Mappable {
         static let transactionDetail = "transactionDetail"
     }
 }
-
-
-PBPartnerDisplayName
-PBAlias
-PBCategory

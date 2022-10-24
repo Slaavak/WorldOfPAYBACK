@@ -23,7 +23,8 @@
 		564C8AD92906B33800AB5733 /* PBCategoryOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AD82906B33800AB5733 /* PBCategoryOM.swift */; };
 		564C8ADB2906B3DD00AB5733 /* PBValueOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ADA2906B3DD00AB5733 /* PBValueOM.swift */; };
 		564C8ADD2906B54D00AB5733 /* TransactionsArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ADC2906B54D00AB5733 /* TransactionsArrayTransform.swift */; };
-		89C0634ED50E2D2F0A7071E4 /* Pods_WorldOfPAYBACK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C578834C6AD11FE4467240 /* Pods_WorldOfPAYBACK.framework */; };
+		564C8AE02906BFD200AB5733 /* MappableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ADF2906BFD200AB5733 /* MappableHelper.swift */; };
+		CD98B1F48BD4469D3EC2453B /* Pods_WorldOfPAYBACK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA5EBFBC28429D556BB5A18 /* Pods_WorldOfPAYBACK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01C578834C6AD11FE4467240 /* Pods_WorldOfPAYBACK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldOfPAYBACK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BA5EBFBC28429D556BB5A18 /* Pods_WorldOfPAYBACK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldOfPAYBACK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		564C8A972906A5E800AB5733 /* WorldOfPAYBACK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564C8A9A2906A5E800AB5733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		564C8A9C2906A5E800AB5733 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,8 +66,9 @@
 		564C8AD82906B33800AB5733 /* PBCategoryOM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBCategoryOM.swift; sourceTree = "<group>"; };
 		564C8ADA2906B3DD00AB5733 /* PBValueOM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBValueOM.swift; sourceTree = "<group>"; };
 		564C8ADC2906B54D00AB5733 /* TransactionsArrayTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsArrayTransform.swift; sourceTree = "<group>"; };
-		76E7B2EA24F13D4CA301FD28 /* Pods-WorldOfPAYBACK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPAYBACK.debug.xcconfig"; path = "Target Support Files/Pods-WorldOfPAYBACK/Pods-WorldOfPAYBACK.debug.xcconfig"; sourceTree = "<group>"; };
-		DC0F779B3984B9B1B726358C /* Pods-WorldOfPAYBACK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPAYBACK.release.xcconfig"; path = "Target Support Files/Pods-WorldOfPAYBACK/Pods-WorldOfPAYBACK.release.xcconfig"; sourceTree = "<group>"; };
+		564C8ADF2906BFD200AB5733 /* MappableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableHelper.swift; sourceTree = "<group>"; };
+		8A82018084D4B72BB49A0B03 /* Pods-WorldOfPAYBACK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPAYBACK.release.xcconfig"; path = "Target Support Files/Pods-WorldOfPAYBACK/Pods-WorldOfPAYBACK.release.xcconfig"; sourceTree = "<group>"; };
+		A8A99D65CA4FA7DDD58CC851 /* Pods-WorldOfPAYBACK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPAYBACK.debug.xcconfig"; path = "Target Support Files/Pods-WorldOfPAYBACK/Pods-WorldOfPAYBACK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89C0634ED50E2D2F0A7071E4 /* Pods_WorldOfPAYBACK.framework in Frameworks */,
+				CD98B1F48BD4469D3EC2453B /* Pods_WorldOfPAYBACK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02252349F21351CE9136425B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5EBFBC28429D556BB5A18 /* Pods_WorldOfPAYBACK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		564C8A8E2906A5E800AB5733 = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +113,7 @@
 				564C8ABA2906A5E900AB5733 /* WorldOfPAYBACKUITests */,
 				564C8A982906A5E800AB5733 /* Products */,
 				6E32D83C46DDDA3E0BF90B32 /* Pods */,
-				C538D40FD7F8A823C82F9918 /* Frameworks */,
+				02252349F21351CE9136425B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +187,7 @@
 		564C8AD22906AF6300AB5733 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				564C8ADF2906BFD200AB5733 /* MappableHelper.swift */,
 				564C8ADC2906B54D00AB5733 /* TransactionsArrayTransform.swift */,
 				564C8AD52906B13600AB5733 /* PBTransactionsOM */,
 			);
@@ -198,18 +209,10 @@
 		6E32D83C46DDDA3E0BF90B32 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				76E7B2EA24F13D4CA301FD28 /* Pods-WorldOfPAYBACK.debug.xcconfig */,
-				DC0F779B3984B9B1B726358C /* Pods-WorldOfPAYBACK.release.xcconfig */,
+				A8A99D65CA4FA7DDD58CC851 /* Pods-WorldOfPAYBACK.debug.xcconfig */,
+				8A82018084D4B72BB49A0B03 /* Pods-WorldOfPAYBACK.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		C538D40FD7F8A823C82F9918 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				01C578834C6AD11FE4467240 /* Pods_WorldOfPAYBACK.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,11 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 564C8AC12906A5E900AB5733 /* Build configuration list for PBXNativeTarget "WorldOfPAYBACK" */;
 			buildPhases = (
-				B2878A327EEA335B74571972 /* [CP] Check Pods Manifest.lock */,
+				32F405415B9FCCB015EBC488 /* [CP] Check Pods Manifest.lock */,
 				564C8A932906A5E800AB5733 /* Sources */,
 				564C8A942906A5E800AB5733 /* Frameworks */,
 				564C8A952906A5E800AB5733 /* Resources */,
-				C46BFC69D68B5DA42892FB4C /* [CP] Embed Pods Frameworks */,
+				66A8092AC5C578F11EBA7598 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,7 +344,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B2878A327EEA335B74571972 /* [CP] Check Pods Manifest.lock */ = {
+		32F405415B9FCCB015EBC488 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,7 +366,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C46BFC69D68B5DA42892FB4C /* [CP] Embed Pods Frameworks */ = {
+		66A8092AC5C578F11EBA7598 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,6 +392,7 @@
 			files = (
 				564C8ACF2906A6D800AB5733 /* NetworkHelper.swift in Sources */,
 				564C8AD92906B33800AB5733 /* PBCategoryOM.swift in Sources */,
+				564C8AE02906BFD200AB5733 /* MappableHelper.swift in Sources */,
 				564C8A9F2906A5E800AB5733 /* ViewController.swift in Sources */,
 				564C8AD42906B12100AB5733 /* PBTransactionOM.swift in Sources */,
 				564C8ADB2906B3DD00AB5733 /* PBValueOM.swift in Sources */,
@@ -570,7 +574,7 @@
 		};
 		564C8AC22906A5E900AB5733 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76E7B2EA24F13D4CA301FD28 /* Pods-WorldOfPAYBACK.debug.xcconfig */;
+			baseConfigurationReference = A8A99D65CA4FA7DDD58CC851 /* Pods-WorldOfPAYBACK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -581,6 +585,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -593,13 +598,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		564C8AC32906A5E900AB5733 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC0F779B3984B9B1B726358C /* Pods-WorldOfPAYBACK.release.xcconfig */;
+			baseConfigurationReference = 8A82018084D4B72BB49A0B03 /* Pods-WorldOfPAYBACK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -610,6 +615,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -622,7 +628,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
