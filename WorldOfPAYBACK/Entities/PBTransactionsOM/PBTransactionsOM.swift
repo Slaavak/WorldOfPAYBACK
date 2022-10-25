@@ -7,7 +7,7 @@
 
 import ObjectMapper
 
-public class PBTransactionsOM: MappableHelper {
+public class PBTransactionsOM: MappableHelper, TransactionsEntityProtocol {
 
     /// Транзакции
     public private(set) var items: [PBTransactionOM]

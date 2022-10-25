@@ -13,13 +13,13 @@ public class PBTransactionOM: MappableHelper {
     public private(set) var partnerDisplayName: String
 
     /// Псевдоним
-    public private(set) var alias: [PBAliasOM]
+    public private(set) var alias: PBAliasOM
 
     /// Категория
     public private(set) var category: Int
 
     /// Детали транзакции
-    public private(set) var transactionDetail: [PBTransactionDetailOM]
+    public private(set) var transactionDetail: PBTransactionDetailOM
 
     required public init(map: Map) throws {
         partnerDisplayName = try map.value(Constants.partnerDisplayName)

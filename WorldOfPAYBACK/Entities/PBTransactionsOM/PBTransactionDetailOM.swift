@@ -10,7 +10,7 @@ import ObjectMapper
 public class PBTransactionDetailOM: MappableHelper {
 
     /// Описание
-    public private(set) var description: String
+    public private(set) var description: String?
 
     /// Дата бронирования
     public private(set) var bookingDate: String

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		564C8A9B2906A5E800AB5733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8A9A2906A5E800AB5733 /* AppDelegate.swift */; };
-		564C8A9D2906A5E800AB5733 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8A9C2906A5E800AB5733 /* SceneDelegate.swift */; };
 		564C8A9F2906A5E800AB5733 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8A9E2906A5E800AB5733 /* ViewController.swift */; };
 		564C8AA22906A5E800AB5733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564C8AA02906A5E800AB5733 /* Main.storyboard */; };
 		564C8AA42906A5E900AB5733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564C8AA32906A5E900AB5733 /* Assets.xcassets */; };
@@ -20,10 +19,37 @@
 		564C8AD12906A82200AB5733 /* PBTransactionsOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AD02906A82200AB5733 /* PBTransactionsOM.swift */; };
 		564C8AD42906B12100AB5733 /* PBTransactionOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AD32906B12100AB5733 /* PBTransactionOM.swift */; };
 		564C8AD72906B26400AB5733 /* PBAliasOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AD62906B26400AB5733 /* PBAliasOM.swift */; };
-		564C8AD92906B33800AB5733 /* PBCategoryOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AD82906B33800AB5733 /* PBCategoryOM.swift */; };
+		564C8AD92906B33800AB5733 /* PBTransactionDetailOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AD82906B33800AB5733 /* PBTransactionDetailOM.swift */; };
 		564C8ADB2906B3DD00AB5733 /* PBValueOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ADA2906B3DD00AB5733 /* PBValueOM.swift */; };
 		564C8ADD2906B54D00AB5733 /* TransactionsArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ADC2906B54D00AB5733 /* TransactionsArrayTransform.swift */; };
 		564C8AE02906BFD200AB5733 /* MappableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ADF2906BFD200AB5733 /* MappableHelper.swift */; };
+		564C8AE82907399400AB5733 /* TransactionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AE72907399300AB5733 /* TransactionViewCellModel.swift */; };
+		564C8AED2907DE6B00AB5733 /* TransactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AEC2907DE6B00AB5733 /* TransactionViewCell.swift */; };
+		564C8AF02907E1EC00AB5733 /* TransactionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564C8AEE2907E0B700AB5733 /* TransactionViewCell.xib */; };
+		564C8AF22908089400AB5733 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AF12908089400AB5733 /* DateTransform.swift */; };
+		564C8AF429080BD100AB5733 /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 564C8AF329080BD100AB5733 /* PBTransactions.json */; };
+		564C8AF729080E0300AB5733 /* PBTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AF629080E0300AB5733 /* PBTransactions.swift */; };
+		564C8AFB2908537A00AB5733 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ACE2906A6D800AB5733 /* NetworkHelper.swift */; };
+		564C8AFC2908537A00AB5733 /* TransactionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AE72907399300AB5733 /* TransactionViewCellModel.swift */; };
+		564C8AFD2908537A00AB5733 /* PBTransactionDetailOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AD82906B33800AB5733 /* PBTransactionDetailOM.swift */; };
+		564C8AFE2908537A00AB5733 /* MappableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ADF2906BFD200AB5733 /* MappableHelper.swift */; };
+		564C8AFF2908537A00AB5733 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8A9E2906A5E800AB5733 /* ViewController.swift */; };
+		564C8B002908537A00AB5733 /* PBTransactionOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AD32906B12100AB5733 /* PBTransactionOM.swift */; };
+		564C8B012908537A00AB5733 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AF12908089400AB5733 /* DateTransform.swift */; };
+		564C8B022908537A00AB5733 /* PBValueOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ADA2906B3DD00AB5733 /* PBValueOM.swift */; };
+		564C8B032908537A00AB5733 /* PBTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AF629080E0300AB5733 /* PBTransactions.swift */; };
+		564C8B042908537A00AB5733 /* TransactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AEC2907DE6B00AB5733 /* TransactionViewCell.swift */; };
+		564C8B052908537A00AB5733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8A9A2906A5E800AB5733 /* AppDelegate.swift */; };
+		564C8B062908537A00AB5733 /* PBAliasOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AD62906B26400AB5733 /* PBAliasOM.swift */; };
+		564C8B072908537A00AB5733 /* PBTransactionsOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8AD02906A82200AB5733 /* PBTransactionsOM.swift */; };
+		564C8B082908537A00AB5733 /* TransactionsArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8ADC2906B54D00AB5733 /* TransactionsArrayTransform.swift */; };
+		564C8B0A2908537A00AB5733 /* Pods_WorldOfPAYBACK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA5EBFBC28429D556BB5A18 /* Pods_WorldOfPAYBACK.framework */; };
+		564C8B0C2908537A00AB5733 /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 564C8AF329080BD100AB5733 /* PBTransactions.json */; };
+		564C8B0D2908537A00AB5733 /* TransactionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564C8AEE2907E0B700AB5733 /* TransactionViewCell.xib */; };
+		564C8B0E2908537A00AB5733 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564C8AA52906A5E900AB5733 /* LaunchScreen.storyboard */; };
+		564C8B0F2908537A00AB5733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564C8AA32906A5E900AB5733 /* Assets.xcassets */; };
+		564C8B102908537A00AB5733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564C8AA02906A5E800AB5733 /* Main.storyboard */; };
+		564C8B182908939300AB5733 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8B172908939300AB5733 /* StringExtensions.swift */; };
 		CD98B1F48BD4469D3EC2453B /* Pods_WorldOfPAYBACK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA5EBFBC28429D556BB5A18 /* Pods_WorldOfPAYBACK.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +74,6 @@
 		0BA5EBFBC28429D556BB5A18 /* Pods_WorldOfPAYBACK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldOfPAYBACK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		564C8A972906A5E800AB5733 /* WorldOfPAYBACK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564C8A9A2906A5E800AB5733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		564C8A9C2906A5E800AB5733 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		564C8A9E2906A5E800AB5733 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		564C8AA12906A5E800AB5733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		564C8AA32906A5E900AB5733 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,10 +88,19 @@
 		564C8AD02906A82200AB5733 /* PBTransactionsOM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTransactionsOM.swift; sourceTree = "<group>"; };
 		564C8AD32906B12100AB5733 /* PBTransactionOM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTransactionOM.swift; sourceTree = "<group>"; };
 		564C8AD62906B26400AB5733 /* PBAliasOM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBAliasOM.swift; sourceTree = "<group>"; };
-		564C8AD82906B33800AB5733 /* PBCategoryOM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBCategoryOM.swift; sourceTree = "<group>"; };
+		564C8AD82906B33800AB5733 /* PBTransactionDetailOM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTransactionDetailOM.swift; sourceTree = "<group>"; };
 		564C8ADA2906B3DD00AB5733 /* PBValueOM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBValueOM.swift; sourceTree = "<group>"; };
 		564C8ADC2906B54D00AB5733 /* TransactionsArrayTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsArrayTransform.swift; sourceTree = "<group>"; };
 		564C8ADF2906BFD200AB5733 /* MappableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableHelper.swift; sourceTree = "<group>"; };
+		564C8AE72907399300AB5733 /* TransactionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewCellModel.swift; sourceTree = "<group>"; };
+		564C8AEC2907DE6B00AB5733 /* TransactionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewCell.swift; sourceTree = "<group>"; };
+		564C8AEE2907E0B700AB5733 /* TransactionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionViewCell.xib; sourceTree = "<group>"; };
+		564C8AF12908089400AB5733 /* DateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTransform.swift; sourceTree = "<group>"; };
+		564C8AF329080BD100AB5733 /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PBTransactions.json; sourceTree = "<group>"; };
+		564C8AF629080E0300AB5733 /* PBTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTransactions.swift; sourceTree = "<group>"; };
+		564C8B152908537A00AB5733 /* WorldOfPAYBACK-DEBUG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPAYBACK-DEBUG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		564C8B162908537A00AB5733 /* WorldOfPAYBACK copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WorldOfPAYBACK copy-Info.plist"; path = "/Users/slavakorolevich/Desktop/WorldOfPAYBACK/WorldOfPAYBACK copy-Info.plist"; sourceTree = "<absolute>"; };
+		564C8B172908939300AB5733 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		8A82018084D4B72BB49A0B03 /* Pods-WorldOfPAYBACK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPAYBACK.release.xcconfig"; path = "Target Support Files/Pods-WorldOfPAYBACK/Pods-WorldOfPAYBACK.release.xcconfig"; sourceTree = "<group>"; };
 		A8A99D65CA4FA7DDD58CC851 /* Pods-WorldOfPAYBACK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPAYBACK.debug.xcconfig"; path = "Target Support Files/Pods-WorldOfPAYBACK/Pods-WorldOfPAYBACK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +128,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		564C8B092908537A00AB5733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				564C8B0A2908537A00AB5733 /* Pods_WorldOfPAYBACK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -114,6 +156,7 @@
 				564C8A982906A5E800AB5733 /* Products */,
 				6E32D83C46DDDA3E0BF90B32 /* Pods */,
 				02252349F21351CE9136425B /* Frameworks */,
+				564C8B162908537A00AB5733 /* WorldOfPAYBACK copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +166,7 @@
 				564C8A972906A5E800AB5733 /* WorldOfPAYBACK.app */,
 				564C8AAD2906A5E900AB5733 /* WorldOfPAYBACKTests.xctest */,
 				564C8AB72906A5E900AB5733 /* WorldOfPAYBACKUITests.xctest */,
+				564C8B152908537A00AB5733 /* WorldOfPAYBACK-DEBUG.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				564C8ACE2906A6D800AB5733 /* NetworkHelper.swift */,
+				564C8B172908939300AB5733 /* StringExtensions.swift */,
 				564C8AD22906AF6300AB5733 /* Entities */,
 				564C8ACA2906A5FC00AB5733 /* MainViewController */,
 				564C8ACD2906A69500AB5733 /* SupportingFiles */,
@@ -161,6 +206,7 @@
 			children = (
 				564C8AA02906A5E800AB5733 /* Main.storyboard */,
 				564C8A9E2906A5E800AB5733 /* ViewController.swift */,
+				564C8AE929073E8E00AB5733 /* Cell */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -168,6 +214,7 @@
 		564C8ACB2906A61100AB5733 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				564C8AF329080BD100AB5733 /* PBTransactions.json */,
 				564C8AA82906A5E900AB5733 /* Info.plist */,
 				564C8AA32906A5E900AB5733 /* Assets.xcassets */,
 			);
@@ -179,7 +226,6 @@
 			children = (
 				564C8AA52906A5E900AB5733 /* LaunchScreen.storyboard */,
 				564C8A9A2906A5E800AB5733 /* AppDelegate.swift */,
-				564C8A9C2906A5E800AB5733 /* SceneDelegate.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -189,6 +235,8 @@
 			children = (
 				564C8ADF2906BFD200AB5733 /* MappableHelper.swift */,
 				564C8ADC2906B54D00AB5733 /* TransactionsArrayTransform.swift */,
+				564C8AF12908089400AB5733 /* DateTransform.swift */,
+				564C8AF529080DED00AB5733 /* PBTrabsactions */,
 				564C8AD52906B13600AB5733 /* PBTransactionsOM */,
 			);
 			path = Entities;
@@ -200,10 +248,28 @@
 				564C8AD02906A82200AB5733 /* PBTransactionsOM.swift */,
 				564C8AD32906B12100AB5733 /* PBTransactionOM.swift */,
 				564C8AD62906B26400AB5733 /* PBAliasOM.swift */,
-				564C8AD82906B33800AB5733 /* PBCategoryOM.swift */,
+				564C8AD82906B33800AB5733 /* PBTransactionDetailOM.swift */,
 				564C8ADA2906B3DD00AB5733 /* PBValueOM.swift */,
 			);
 			path = PBTransactionsOM;
+			sourceTree = "<group>";
+		};
+		564C8AE929073E8E00AB5733 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				564C8AEC2907DE6B00AB5733 /* TransactionViewCell.swift */,
+				564C8AE72907399300AB5733 /* TransactionViewCellModel.swift */,
+				564C8AEE2907E0B700AB5733 /* TransactionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		564C8AF529080DED00AB5733 /* PBTrabsactions */ = {
+			isa = PBXGroup;
+			children = (
+				564C8AF629080E0300AB5733 /* PBTransactions.swift */,
+			);
+			path = PBTrabsactions;
 			sourceTree = "<group>";
 		};
 		6E32D83C46DDDA3E0BF90B32 /* Pods */ = {
@@ -273,6 +339,25 @@
 			productReference = 564C8AB72906A5E900AB5733 /* WorldOfPAYBACKUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		564C8AF82908537A00AB5733 /* WorldOfPAYBACK-DEBUG */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 564C8B122908537A00AB5733 /* Build configuration list for PBXNativeTarget "WorldOfPAYBACK-DEBUG" */;
+			buildPhases = (
+				564C8AF92908537A00AB5733 /* [CP] Check Pods Manifest.lock */,
+				564C8AFA2908537A00AB5733 /* Sources */,
+				564C8B092908537A00AB5733 /* Frameworks */,
+				564C8B0B2908537A00AB5733 /* Resources */,
+				564C8B112908537A00AB5733 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WorldOfPAYBACK-DEBUG";
+			productName = WorldOfPAYBACK;
+			productReference = 564C8B152908537A00AB5733 /* WorldOfPAYBACK-DEBUG.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -310,6 +395,7 @@
 			projectRoot = "";
 			targets = (
 				564C8A962906A5E800AB5733 /* WorldOfPAYBACK */,
+				564C8AF82908537A00AB5733 /* WorldOfPAYBACK-DEBUG */,
 				564C8AAC2906A5E900AB5733 /* WorldOfPAYBACKTests */,
 				564C8AB62906A5E900AB5733 /* WorldOfPAYBACKUITests */,
 			);
@@ -321,6 +407,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564C8AF429080BD100AB5733 /* PBTransactions.json in Resources */,
+				564C8AF02907E1EC00AB5733 /* TransactionViewCell.xib in Resources */,
 				564C8AA72906A5E900AB5733 /* LaunchScreen.storyboard in Resources */,
 				564C8AA42906A5E900AB5733 /* Assets.xcassets in Resources */,
 				564C8AA22906A5E800AB5733 /* Main.storyboard in Resources */,
@@ -338,6 +426,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		564C8B0B2908537A00AB5733 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				564C8B0C2908537A00AB5733 /* PBTransactions.json in Resources */,
+				564C8B0D2908537A00AB5733 /* TransactionViewCell.xib in Resources */,
+				564C8B0E2908537A00AB5733 /* LaunchScreen.storyboard in Resources */,
+				564C8B0F2908537A00AB5733 /* Assets.xcassets in Resources */,
+				564C8B102908537A00AB5733 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +466,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		564C8AF92908537A00AB5733 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WorldOfPAYBACK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		564C8B112908537A00AB5733 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldOfPAYBACK/Pods-WorldOfPAYBACK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldOfPAYBACK/Pods-WorldOfPAYBACK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldOfPAYBACK/Pods-WorldOfPAYBACK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		66A8092AC5C578F11EBA7598 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -391,16 +530,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				564C8ACF2906A6D800AB5733 /* NetworkHelper.swift in Sources */,
-				564C8AD92906B33800AB5733 /* PBCategoryOM.swift in Sources */,
+				564C8AE82907399400AB5733 /* TransactionViewCellModel.swift in Sources */,
+				564C8AD92906B33800AB5733 /* PBTransactionDetailOM.swift in Sources */,
 				564C8AE02906BFD200AB5733 /* MappableHelper.swift in Sources */,
 				564C8A9F2906A5E800AB5733 /* ViewController.swift in Sources */,
 				564C8AD42906B12100AB5733 /* PBTransactionOM.swift in Sources */,
+				564C8AF22908089400AB5733 /* DateTransform.swift in Sources */,
 				564C8ADB2906B3DD00AB5733 /* PBValueOM.swift in Sources */,
+				564C8AF729080E0300AB5733 /* PBTransactions.swift in Sources */,
+				564C8AED2907DE6B00AB5733 /* TransactionViewCell.swift in Sources */,
 				564C8A9B2906A5E800AB5733 /* AppDelegate.swift in Sources */,
 				564C8AD72906B26400AB5733 /* PBAliasOM.swift in Sources */,
+				564C8B182908939300AB5733 /* StringExtensions.swift in Sources */,
 				564C8AD12906A82200AB5733 /* PBTransactionsOM.swift in Sources */,
 				564C8ADD2906B54D00AB5733 /* TransactionsArrayTransform.swift in Sources */,
-				564C8A9D2906A5E800AB5733 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +561,27 @@
 			files = (
 				564C8ABE2906A5E900AB5733 /* WorldOfPAYBACKUITestsLaunchTests.swift in Sources */,
 				564C8ABC2906A5E900AB5733 /* WorldOfPAYBACKUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		564C8AFA2908537A00AB5733 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				564C8AFB2908537A00AB5733 /* NetworkHelper.swift in Sources */,
+				564C8AFC2908537A00AB5733 /* TransactionViewCellModel.swift in Sources */,
+				564C8AFD2908537A00AB5733 /* PBTransactionDetailOM.swift in Sources */,
+				564C8AFE2908537A00AB5733 /* MappableHelper.swift in Sources */,
+				564C8AFF2908537A00AB5733 /* ViewController.swift in Sources */,
+				564C8B002908537A00AB5733 /* PBTransactionOM.swift in Sources */,
+				564C8B012908537A00AB5733 /* DateTransform.swift in Sources */,
+				564C8B022908537A00AB5733 /* PBValueOM.swift in Sources */,
+				564C8B032908537A00AB5733 /* PBTransactions.swift in Sources */,
+				564C8B042908537A00AB5733 /* TransactionViewCell.swift in Sources */,
+				564C8B052908537A00AB5733 /* AppDelegate.swift in Sources */,
+				564C8B062908537A00AB5733 /* PBAliasOM.swift in Sources */,
+				564C8B072908537A00AB5733 /* PBTransactionsOM.swift in Sources */,
+				564C8B082908537A00AB5733 /* TransactionsArrayTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +758,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = SamSolutions.WorldOfPAYBACK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -708,6 +873,68 @@
 			};
 			name = Release;
 		};
+		564C8B132908537A00AB5733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8A99D65CA4FA7DDD58CC851 /* Pods-WorldOfPAYBACK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WorldOfPAYBACK copy-Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = SamSolutions.WorldOfPAYBACK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		564C8B142908537A00AB5733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A82018084D4B72BB49A0B03 /* Pods-WorldOfPAYBACK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WorldOfPAYBACK copy-Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = SamSolutions.WorldOfPAYBACK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -743,6 +970,15 @@
 			buildConfigurations = (
 				564C8AC82906A5E900AB5733 /* Debug */,
 				564C8AC92906A5E900AB5733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		564C8B122908537A00AB5733 /* Build configuration list for PBXNativeTarget "WorldOfPAYBACK-DEBUG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				564C8B132908537A00AB5733 /* Debug */,
+				564C8B142908537A00AB5733 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

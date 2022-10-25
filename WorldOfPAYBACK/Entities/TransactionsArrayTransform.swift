@@ -22,7 +22,7 @@ public class TransactionsArrayTransform: TransformType {
         }
 
         var result = [PBTransactionOM]()
-        result.append(contentsOf: objects)
+        result.append(contentsOf: result.sorted(by: { $0.transactionDetail.bookingDate > $1.transactionDetail.bookingDate }))
         return result
     }
 }
