@@ -11,15 +11,14 @@ class ViewController: UIViewController {
 
     //MARK: - Outlets
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var bottomButtonOutlet: UIButton!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var bottomButtonOutlet: UIButton!
 
     //MARK: - Properties
 
     private var networkHelper: NetworkHelperProtocol!
     private var cellReuseIdentifier = "TransactionViewCell"
     private var transactionCellViewModels: [TransactionViewCellModel] = []
-    private let spinner = SpinnerViewController()
 
     //MARK: - Lyfecycle
 
@@ -70,7 +69,7 @@ class ViewController: UIViewController {
 
     private func handleGetTransactionsResponse(response: TransactionsEntityProtocol) {
 
-        // not mocked, not debag
+#if DEBUG
         guard let resp = response as? PBTransactions else {
             return
         }
@@ -91,7 +90,8 @@ class ViewController: UIViewController {
         transactionCellViewModels = transactionCellViewModels.sorted(by: { $0.date > $1.date })
         tableView.reloadData()
 
-        // mocked, debag
+#else
+
         guard let resp = response as? PBTransactionsOM  else {
             return
         }
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
             transactionCellViewModels.append(
                 TransactionViewCellModel(
                     partnerName: item.partnerDisplayName,
-                    description: item.transactionDetail.description ?? " ",
+                    description: item.transactionDetail.description ?? .emptySpace,
                     date: dateTuple.0,
                     dateString: dateTuple.1,
                     value: String(item.transactionDetail.value.amount),
@@ -111,6 +111,7 @@ class ViewController: UIViewController {
         }
         transactionCellViewModels = transactionCellViewModels.sorted(by: { $0.date > $1.date })
         tableView.reloadData()
+#endif
     }
 
     private func setupTableView() {
@@ -133,16 +134,14 @@ class ViewController: UIViewController {
     }
 
     private func showSpinnerView() {
-        addChild(spinner)
-        spinner.view.frame = view.frame
-        view.addSubview(spinner.view)
-        spinner.didMove(toParent: self)
+        let loader = UIStoryboard.init(name: "LoaderView", bundle: nil).instantiateViewController(withIdentifier: "LoaderView")
+        loader.modalPresentationStyle = .overFullScreen
+
+        present(loader, animated: false, completion: nil)
     }
 
     private func hideSpinnerView() {
-        spinner.willMove(toParent: nil)
-        spinner.view.removeFromSuperview()
-        spinner.removeFromParent()
+        dismiss(animated: false, completion: nil)
     }
 }
 
@@ -183,14 +182,16 @@ class SpinnerViewController: UIViewController {
     var spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
 
     override func loadView() {
-        view = UIView()
-        view.backgroundColor = UIColor(white: 0, alpha: 0.7)
+//        view = UIView()
+//        view.backgroundColor = UIColor(white: 0, alpha: 0.7)
+//
+//        spinner.translatesAutoresizingMaskIntoConstraints = false
+//        spinner.startAnimating()
+//        view.addSubview(spinner)
+//
+//        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
-        spinner.translatesAutoresizingMaskIntoConstraints = false
-        spinner.startAnimating()
-        view.addSubview(spinner)
 
-        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }

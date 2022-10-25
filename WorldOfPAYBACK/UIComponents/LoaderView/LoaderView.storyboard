@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loader View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LoaderView" id="Y6W-OH-hqX" customClass="LoaderView" customModule="WorldOfPAYBACK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lWu-k2-w8a">
+                                <rect key="frame" x="87" y="398" width="240" height="100"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="7Cl-rG-NXe">
+                                        <rect key="frame" x="105" y="25" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="aQl-n7-eo1"/>
+                                            <constraint firstAttribute="height" constant="30" id="aVg-ss-Ynt"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuL-oJ-dtv">
+                                        <rect key="frame" x="56" y="62" width="128.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2BZ-Yh-opg"/>
+                                    <constraint firstItem="EuL-oJ-dtv" firstAttribute="centerX" secondItem="lWu-k2-w8a" secondAttribute="centerX" id="UO5-Da-nDR"/>
+                                    <constraint firstItem="7Cl-rG-NXe" firstAttribute="centerY" secondItem="lWu-k2-w8a" secondAttribute="centerY" constant="-10" id="rvw-mF-4lI"/>
+                                    <constraint firstItem="EuL-oJ-dtv" firstAttribute="centerY" secondItem="lWu-k2-w8a" secondAttribute="centerY" constant="25" id="sUQ-2y-LYx"/>
+                                    <constraint firstItem="7Cl-rG-NXe" firstAttribute="centerX" secondItem="lWu-k2-w8a" secondAttribute="centerX" id="uv3-jp-rmB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lWu-k2-w8a" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.57971" id="Teb-gr-Ra3"/>
+                            <constraint firstItem="lWu-k2-w8a" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="dOu-Lw-brX"/>
+                            <constraint firstItem="lWu-k2-w8a" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mwf-bS-Mt1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activitiIndicator" destination="7Cl-rG-NXe" id="dDw-jr-dLN"/>
+                        <outlet property="alertView" destination="lWu-k2-w8a" id="S3D-Va-Luf"/>
+                        <outlet property="backView" destination="5EZ-qb-Rvc" id="0HN-n0-NyT"/>
+                        <outlet property="titleLabel" destination="EuL-oJ-dtv" id="WGO-0h-Zsw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="42"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
