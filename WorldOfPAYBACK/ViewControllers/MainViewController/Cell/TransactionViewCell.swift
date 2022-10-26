@@ -7,22 +7,22 @@
 
 import UIKit
 
-final class TransactionViewCell: UITableViewCell {
+class TransactionViewCell: UITableViewCell {
+
+    //MARK: - Outlets
 
     @IBOutlet private weak var partnerNameLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var valueLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
 
+    //MARK: - Lyfecycle
+
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        setupUI()
     }
 
-    private func setupUI() {
-
-    }
+    //MARK: - Actions
 
     public func updateUI(with model: TransactionViewCellModel) {
         partnerNameLabel.text = model.partnerName

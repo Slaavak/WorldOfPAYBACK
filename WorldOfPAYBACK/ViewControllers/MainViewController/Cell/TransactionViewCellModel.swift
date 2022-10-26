@@ -9,6 +9,8 @@ import Foundation
 
 public class TransactionViewCellModel {
 
+    //MARK: - Init
+
     init(
         partnerName: String,
         description: String,
@@ -26,6 +28,8 @@ public class TransactionViewCellModel {
         self.dateString = dateString
         self.category = category
     }
+
+    //MARK: - Properties
 
     public let partnerName: String
     public let description: String

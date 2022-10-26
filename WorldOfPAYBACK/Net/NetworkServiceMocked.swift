@@ -1,5 +1,5 @@
 //
-//  NetworkHelperMocked.swift
+//  NetworkServiceMocked.swift
 //  WorldOfPAYBACK
 //
 //  Created by Slava Korolevich on 26.10.22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkHelperMocked: NetworkHelperProtocol {
+class NetworkServiceMocked: NetworkHelperProtocol {
 
     private var delaySimulation: DispatchTime = .now() + 3
 

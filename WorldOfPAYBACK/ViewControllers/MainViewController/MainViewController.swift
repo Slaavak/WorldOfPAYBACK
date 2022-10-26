@@ -19,7 +19,6 @@ class MainViewController: UIViewController {
     //MARK: - Properties
 
     private var networkHelper: NetworkHelperProtocol!
-    private var cellReuseIdentifier = "TransactionViewCell"
     private var transactionCellViewModels: [TransactionViewCellModel] = []
     private var transactionCellViewModelsToDisplay: [TransactionViewCellModel] = []
     private var transactionsCategory = ["All", "Sell", "Buy", "Special"]
@@ -29,7 +28,6 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkMonitor.shared.startMonitoring()
         setup()
         setupTableView()
         startRequest()
@@ -57,9 +55,19 @@ class MainViewController: UIViewController {
                 strongSelf.handleGetTransactionsResponse(response: response)
             },
             failure: { errorMsg in
-                let alert = UIAlertController(title: "Error", message: errorMsg, preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-                weakSelf?.present(alert, animated: true, completion: nil)
+                let alert = UIAlertController(
+                    title: Constants.failureAlertTitle,
+                    message: errorMsg,
+                    preferredStyle: .alert
+                )
+                alert.addAction(
+                    UIAlertAction(
+                        title: Constants.failureAlertOk,
+                        style: .default,
+                        handler: nil
+                    )
+                )
+                weakSelf?.present(alert, animated: true)
             },
             initInterface: {
                 weakSelf?.showLoaderView()
@@ -72,22 +80,18 @@ class MainViewController: UIViewController {
 
     private func setup() {
 #if DEBUG
-        networkHelper = NetworkHelperMocked()
+        networkHelper = NetworkServiceMocked()
 #else
-        networkHelper = NetworkHelper()
+        networkHelper = NetworkService()
 #endif
-
-
         pickerView.dataSource = self
         pickerView.delegate = self
         pickerViewTextField.text = transactionsCategory.first ?? .empty
-        pickerViewTextField.delegate = self
         pickerViewTextField.inputView = pickerView
         view.backgroundColor = .white
     }
 
     private func handleGetTransactionsResponse(response: TransactionsEntityProtocol) {
-
 #if DEBUG
         guard let resp = response as? PBTransactions else {
             return
@@ -139,23 +143,24 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .white
-        tableView.estimatedRowHeight = 50
+        tableView.estimatedRowHeight = Constants.rowHeight
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.register(UINib(nibName: cellReuseIdentifier, bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
+        tableView.register(UINib(nibName: Constants.cellReuseIdentifier,bundle: nil), forCellReuseIdentifier: Constants.cellReuseIdentifier)
     }
 
     private func formatDate(string: String) -> (Date, String) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.dateFormat = Constants.responseDateFormat
         let date = dateFormatter.date(from: string)!
-        dateFormatter.dateFormat = "dd.MM.yyyy"
+        dateFormatter.dateFormat = Constants.dateFormat
         let resultString = dateFormatter.string(from: date)
 
         return (date, resultString)
     }
 
     private func showLoaderView() {
-        let loader = UIStoryboard.init(name: "LoaderView", bundle: nil).instantiateViewController(withIdentifier: "LoaderView")
+        let storyboard = UIStoryboard.init(name: Constants.loaderViewIdentifier, bundle: nil)
+        let loader = storyboard.instantiateViewController(withIdentifier: Constants.loaderViewIdentifier)
         loader.modalPresentationStyle = .overFullScreen
 
         present(loader, animated: false, completion: nil)
@@ -171,7 +176,6 @@ class MainViewController: UIViewController {
             transactionCellViewModelsToDisplay = transactionCellViewModels
             tableView.reloadData()
         } else {
-
             transactionCellViewModelsToDisplay = transactionCellViewModels.filter({ $0.category == category })
             tableView.reloadData()
         }
@@ -181,42 +185,54 @@ class MainViewController: UIViewController {
         // It is not clear from the technical task what to do if we have transactions with different currencies
         var totalAmount: Int = .zero
         transactionCellViewModelsToDisplay.forEach({ totalAmount += $0.amount })
-        transactionsValueAmountLabel.text = "Total: " + String(totalAmount)
+        transactionsValueAmountLabel.text = Constants.transactionsValueAmountLabelText + String(totalAmount)
     }
 
     private func pickerViewValueDidChanged(category: Int) {
         filterTransactions(category: category)
         changeLabelText(category: category)
     }
+
+    // MARK: - Constants
+
+    private enum Constants {
+        static let transactionsValueAmountLabelText = "Total: "
+        static let loaderViewIdentifier = "LoaderView"
+        static let dateFormat = "dd.MM.yyyy"
+        static let responseDateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        static let rowHeight: CGFloat = 50
+        static let failureAlertTitle = "Error"
+        static let failureAlertOk = "Ok"
+        static let cellReuseIdentifier = "TransactionViewCell"
+        static let transactionDetailIdentifier = "TransactionDetailViewController"
+        static let numberOfSections = 1
+        static let numberOfComponents = 1
+    }
 }
 
-//MARK: - UITableViewDelegate
+//MARK: - UITableViewDelegate, UITableViewDataSource
 
-extension MainViewController: UITableViewDelegate {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return Constants.numberOfSections
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if let vc = UIStoryboard.init(name: "TransactionDetailViewController", bundle: nil).instantiateViewController(withIdentifier: "TransactionDetailViewController") as? TransactionDetailViewController {
+        let storyboard = UIStoryboard.init(name: Constants.transactionDetailIdentifier, bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: Constants.transactionDetailIdentifier) as? TransactionDetailViewController {
             vc.item = transactionCellViewModelsToDisplay[indexPath.row]
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
-}
 
-//MARK: - UITableViewDataSource
-
-extension MainViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.transactionCellViewModelsToDisplay.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? TransactionViewCell else {
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.cellReuseIdentifier) as? TransactionViewCell else {
             return UITableViewCell()
         }
 
@@ -226,18 +242,12 @@ extension MainViewController: UITableViewDataSource {
 }
 
 
-
-
-
-
-extension MainViewController: UITextFieldDelegate {
-
-}
+// MARK: - UIPickerViewDelegate, UIPickerViewDataSource
 
 extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return Constants.numberOfComponents
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {

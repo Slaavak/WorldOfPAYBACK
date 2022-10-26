@@ -1,5 +1,5 @@
 //
-//  NetworkHelper.swift
+//  NetworkService.swift
 //  WorldOfPAYBACK
 //
 //  Created by Slava Korolevich on 24.10.22.
@@ -17,7 +17,7 @@ protocol NetworkHelperProtocol {
     )
 }
 
-class NetworkHelper: NetworkHelperProtocol {
+class NetworkService: NetworkHelperProtocol {
 
     func getTransactions(
         success: @escaping (TransactionsEntityProtocol) -> Void,
