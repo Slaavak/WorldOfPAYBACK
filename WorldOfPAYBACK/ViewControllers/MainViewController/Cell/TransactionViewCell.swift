@@ -27,7 +27,7 @@ final class TransactionViewCell: UITableViewCell {
     public func updateUI(with model: TransactionViewCellModel) {
         partnerNameLabel.text = model.partnerName
         descriptionLabel.text = model.description
-        valueLabel.text = model.value + model.currency
+        valueLabel.text = String(model.amount) + model.currency
         dateLabel.text = model.dateString
     }
 }

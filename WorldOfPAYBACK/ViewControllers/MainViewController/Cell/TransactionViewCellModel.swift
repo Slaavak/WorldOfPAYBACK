@@ -14,21 +14,24 @@ public class TransactionViewCellModel {
         description: String,
         date: Date,
         dateString: String,
-        value: String,
-        currency: String
+        amount: Int,
+        currency: String,
+        category: Int
     ) {
         self.partnerName = partnerName
         self.description = description
         self.date = date
-        self.value = value
+        self.amount = amount
         self.currency = currency
         self.dateString = dateString
+        self.category = category
     }
 
-    public var partnerName: String
-    public var description: String
-    public var date: Date
-    public var dateString: String
-    public var value: String
-    public var currency: String
+    public let partnerName: String
+    public let description: String
+    public let date: Date
+    public let dateString: String
+    public let amount: Int
+    public let currency: String
+    public let category: Int
 }

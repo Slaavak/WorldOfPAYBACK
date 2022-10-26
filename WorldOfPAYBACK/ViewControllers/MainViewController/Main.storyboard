@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="WorldOfPAYBACK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="WorldOfPAYBACK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,25 +26,57 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="joD-IU-o1I">
-                                <rect key="frame" x="0.0" y="44" width="414" height="771"/>
+                                <rect key="frame" x="0.0" y="102" width="414" height="713"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTj-7a-uti">
+                                <rect key="frame" x="0.0" y="44" width="414" height="58"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8go-rI-peB">
+                                        <rect key="frame" x="16" y="8" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u5-9t-zl6">
+                                        <rect key="frame" x="16" y="50" width="382" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstItem="6u5-9t-zl6" firstAttribute="top" secondItem="8go-rI-peB" secondAttribute="bottom" constant="8" id="9pi-e3-92m"/>
+                                    <constraint firstAttribute="bottom" secondItem="6u5-9t-zl6" secondAttribute="bottom" constant="8" id="EFP-kS-z4u"/>
+                                    <constraint firstAttribute="trailing" secondItem="8go-rI-peB" secondAttribute="trailing" constant="16" id="V4G-6z-cJX"/>
+                                    <constraint firstItem="8go-rI-peB" firstAttribute="leading" secondItem="FTj-7a-uti" secondAttribute="leading" constant="16" id="cCt-1G-VBh"/>
+                                    <constraint firstItem="8go-rI-peB" firstAttribute="top" secondItem="FTj-7a-uti" secondAttribute="top" constant="8" id="dHi-tP-nZs"/>
+                                    <constraint firstAttribute="trailing" secondItem="6u5-9t-zl6" secondAttribute="trailing" constant="16" id="eAa-jk-1j8"/>
+                                    <constraint firstItem="6u5-9t-zl6" firstAttribute="leading" secondItem="FTj-7a-uti" secondAttribute="leading" constant="16" id="fkh-Du-INo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1tX-z1-VLX" secondAttribute="bottom" id="6j0-Jn-9iV"/>
+                            <constraint firstItem="FTj-7a-uti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7jk-Ni-jF4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FTj-7a-uti" secondAttribute="trailing" id="CIt-HD-zhd"/>
                             <constraint firstItem="1tX-z1-VLX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SxF-GR-Z97"/>
-                            <constraint firstItem="joD-IU-o1I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a8d-ol-uCi"/>
+                            <constraint firstItem="FTj-7a-uti" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cRE-88-sje"/>
+                            <constraint firstItem="joD-IU-o1I" firstAttribute="top" secondItem="FTj-7a-uti" secondAttribute="bottom" id="hg0-A2-PRI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1tX-z1-VLX" secondAttribute="trailing" constant="16" id="kb7-eF-WbA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="joD-IU-o1I" secondAttribute="trailing" id="rfU-IZ-Z6a"/>
                             <constraint firstItem="joD-IU-o1I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sVF-fs-JNU"/>
+                            <constraint firstItem="joD-IU-o1I" firstAttribute="top" secondItem="FTj-7a-uti" secondAttribute="bottom" id="u82-Dk-l0E"/>
                             <constraint firstItem="1tX-z1-VLX" firstAttribute="top" secondItem="joD-IU-o1I" secondAttribute="bottom" constant="16" id="w11-Aw-QeX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomButtonOutlet" destination="1tX-z1-VLX" id="BJg-iN-GFd"/>
+                        <outlet property="pickerViewTextField" destination="8go-rI-peB" id="Y1A-LL-fw7"/>
                         <outlet property="tableView" destination="joD-IU-o1I" id="qNY-Mj-ZYa"/>
+                        <outlet property="transactionsValueAmountLabel" destination="6u5-9t-zl6" id="eZc-jT-ygR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -53,6 +85,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
