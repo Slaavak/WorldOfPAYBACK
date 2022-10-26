@@ -20,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = nc
         window?.makeKeyAndVisible()
-        NetworkMonitor().startMonitoring()
-        
+        NetworkMonitor.shared.startMonitoring()
         return true
     }
 }

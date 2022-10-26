@@ -4,7 +4,9 @@
 //
 //  Created by Slava Korolevich on 26.10.22.
 //
+
 import Network
+import UIKit
 
 class NetworkMonitor {
     static let shared = NetworkMonitor()
@@ -21,10 +23,15 @@ class NetworkMonitor {
 
             if path.status == .satisfied {
                 print("We're connected!")
-                // post connected notification
             } else {
                 print("No connection.")
                 // post disconnected notification
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Error", message: "Check your internet connection", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+
+                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                }
             }
             print(path.isExpensive)
         }

@@ -56,6 +56,10 @@
 		564C8B26290943D700AB5733 /* NetworkHelperMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8B25290943D700AB5733 /* NetworkHelperMocked.swift */; };
 		568ED1F7290977860097601C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568ED1F6290977860097601C /* Main.storyboard */; };
 		568ED1F8290977860097601C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568ED1F6290977860097601C /* Main.storyboard */; };
+		568ED1FB2909786E0097601C /* TransactionDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568ED1FA2909786E0097601C /* TransactionDetailViewController.storyboard */; };
+		568ED1FC2909786E0097601C /* TransactionDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568ED1FA2909786E0097601C /* TransactionDetailViewController.storyboard */; };
+		568ED2012909789F0097601C /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568ED2002909789F0097601C /* TransactionDetailViewController.swift */; };
+		568ED2022909789F0097601C /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568ED2002909789F0097601C /* TransactionDetailViewController.swift */; };
 		CD98B1F48BD4469D3EC2453B /* Pods_WorldOfPAYBACK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA5EBFBC28429D556BB5A18 /* Pods_WorldOfPAYBACK.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +115,8 @@
 		564C8B22290935DC00AB5733 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		564C8B25290943D700AB5733 /* NetworkHelperMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelperMocked.swift; sourceTree = "<group>"; };
 		568ED1F6290977860097601C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		568ED1FA2909786E0097601C /* TransactionDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionDetailViewController.storyboard; sourceTree = "<group>"; };
+		568ED2002909789F0097601C /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
 		8A82018084D4B72BB49A0B03 /* Pods-WorldOfPAYBACK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPAYBACK.release.xcconfig"; path = "Target Support Files/Pods-WorldOfPAYBACK/Pods-WorldOfPAYBACK.release.xcconfig"; sourceTree = "<group>"; };
 		A8A99D65CA4FA7DDD58CC851 /* Pods-WorldOfPAYBACK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPAYBACK.debug.xcconfig"; path = "Target Support Files/Pods-WorldOfPAYBACK/Pods-WorldOfPAYBACK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,6 +222,7 @@
 		564C8ACA2906A5FC00AB5733 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				568ED1F9290978560097601C /* TransactionDetailViewController */,
 				564C8B27290972D400AB5733 /* MainViewController */,
 			);
 			path = ViewControllers;
@@ -308,6 +315,15 @@
 				564C8AE929073E8E00AB5733 /* Cell */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		568ED1F9290978560097601C /* TransactionDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				568ED1FA2909786E0097601C /* TransactionDetailViewController.storyboard */,
+				568ED2002909789F0097601C /* TransactionDetailViewController.swift */,
+			);
+			path = TransactionDetailViewController;
 			sourceTree = "<group>";
 		};
 		6E32D83C46DDDA3E0BF90B32 /* Pods */ = {
@@ -446,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				564C8AF429080BD100AB5733 /* PBTransactions.json in Resources */,
+				568ED1FB2909786E0097601C /* TransactionDetailViewController.storyboard in Resources */,
 				564C8B2029089C2700AB5733 /* LoaderView.storyboard in Resources */,
 				564C8AF02907E1EC00AB5733 /* TransactionViewCell.xib in Resources */,
 				568ED1F7290977860097601C /* Main.storyboard in Resources */,
@@ -473,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				564C8B2129089EFB00AB5733 /* LoaderView.storyboard in Resources */,
+				568ED1FC2909786E0097601C /* TransactionDetailViewController.storyboard in Resources */,
 				564C8B0C2908537A00AB5733 /* PBTransactions.json in Resources */,
 				564C8B0D2908537A00AB5733 /* TransactionViewCell.xib in Resources */,
 				568ED1F8290977860097601C /* Main.storyboard in Resources */,
@@ -573,6 +591,7 @@
 				564C8AE82907399400AB5733 /* TransactionViewCellModel.swift in Sources */,
 				564C8AD92906B33800AB5733 /* PBTransactionDetailOM.swift in Sources */,
 				564C8AE02906BFD200AB5733 /* MappableHelper.swift in Sources */,
+				568ED2012909789F0097601C /* TransactionDetailViewController.swift in Sources */,
 				564C8A9F2906A5E800AB5733 /* MainViewController.swift in Sources */,
 				564C8B26290943D700AB5733 /* NetworkHelperMocked.swift in Sources */,
 				564C8AD42906B12100AB5733 /* PBTransactionOM.swift in Sources */,
@@ -619,6 +638,7 @@
 				564C8B002908537A00AB5733 /* PBTransactionOM.swift in Sources */,
 				564C8B012908537A00AB5733 /* DateTransform.swift in Sources */,
 				564C8B022908537A00AB5733 /* PBValueOM.swift in Sources */,
+				568ED2022909789F0097601C /* TransactionDetailViewController.swift in Sources */,
 				564C8B242909360400AB5733 /* NetworkMonitor.swift in Sources */,
 				564C8B032908537A00AB5733 /* PBTransactions.swift in Sources */,
 				564C8B042908537A00AB5733 /* TransactionViewCell.swift in Sources */,

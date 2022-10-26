@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NetworkMonitor.shared.startMonitoring()
         setup()
         setupTableView()
         startRequest()
@@ -199,10 +199,12 @@ extension MainViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = transactionCellViewModelsToDisplay[indexPath.row]
-
+        tableView.deselectRow(at: indexPath, animated: true)
+        if let vc = UIStoryboard.init(name: "TransactionDetailViewController", bundle: nil).instantiateViewController(withIdentifier: "TransactionDetailViewController") as? TransactionDetailViewController {
+            vc.item = transactionCellViewModelsToDisplay[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
-
 }
 
 //MARK: - UITableViewDataSource
