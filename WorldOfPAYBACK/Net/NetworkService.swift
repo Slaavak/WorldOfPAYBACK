@@ -12,7 +12,7 @@ protocol NetworkHelperProtocol {
     func getTransactions(
         success: @escaping (TransactionsEntityProtocol) -> Void,
         failure: @escaping ((String) -> Void),
-        initInterface: @escaping (() -> Void)
+        initInterface: @escaping (VoidBlock)
     )
 }
 
@@ -21,7 +21,7 @@ class NetworkService: NetworkHelperProtocol {
     func getTransactions(
         success: @escaping (TransactionsEntityProtocol) -> Void,
         failure: @escaping ((String) -> Void),
-        initInterface: @escaping (() -> Void)
+        initInterface: @escaping (VoidBlock)
     ) {
 
         initInterface()
@@ -36,7 +36,7 @@ class NetworkService: NetworkHelperProtocol {
                     return
                 }
                 
-                DispatchQueue.main.async {
+                DispatchQueue.performOnMainThread {
                     success(object)
                 }
             }

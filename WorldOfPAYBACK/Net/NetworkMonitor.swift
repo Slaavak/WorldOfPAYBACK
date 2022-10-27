@@ -25,21 +25,20 @@ class NetworkMonitor {
                 print(Constants.connectionPrint)
             } else {
                 print(Constants.disconnectionPrint)
-                DispatchQueue.main.async {
-                    let alert = UIAlertController(
-                        title: Constants.alertTitle,
-                        message: Constants.alertMessage,
-                        preferredStyle: .alert
+                let alert = UIAlertController(
+                    title: Constants.alertTitle,
+                    message: Constants.alertMessage,
+                    preferredStyle: .alert
+                )
+                alert.addAction(
+                    UIAlertAction(
+                        title: Constants.alertOk,
+                        style: .default,
+                        handler: nil
                     )
-                    alert.addAction(
-                        UIAlertAction(
-                            title: Constants.alertOk,
-                            style: .default,
-                            handler: nil
-                        )
-                    )
-
-                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                )
+                DispatchQueue.performOnMainThread {
+                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
                 }
             }
             print(path.isExpensive)

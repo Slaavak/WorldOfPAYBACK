@@ -9,7 +9,7 @@ import Foundation
 
 public extension DispatchQueue {
 
-    static func performOnMainThread(_ action: () -> ()) {
+    static func performOnMainThread(_ action: VoidBlock) {
         if Thread.isMainThread {
             action()
         } else {

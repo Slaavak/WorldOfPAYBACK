@@ -14,7 +14,7 @@ class NetworkServiceMocked: NetworkHelperProtocol {
     func getTransactions(
         success: @escaping (TransactionsEntityProtocol) -> Void,
         failure: @escaping ((String) -> Void),
-        initInterface: @escaping (() -> Void)
+        initInterface: @escaping (VoidBlock)
     ) {
         initInterface()
         DispatchQueue.global().asyncAfter(deadline: delaySimulation) {
