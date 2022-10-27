@@ -24,6 +24,7 @@ class MainViewController: UIViewController {
     private var transactionCellViewModelsToDisplay: [TransactionViewCellModel] = []
     private var transactionsCategory = ["All", "Sell", "Buy", "Special"]
     private var pickerView = UIPickerView()
+    public var progressService: ProgressServiceProtocol!
 
     //MARK: - Lyfecycle
 
@@ -54,27 +55,17 @@ class MainViewController: UIViewController {
                 }
 
                 strongSelf.handleGetTransactionsResponse(response: response)
+                strongSelf.progressService.hideLoader(complition: nil)
             },
             failure: { errorMsg in
-                let alert = UIAlertController(
-                    title: Constants.failureAlertTitle,
-                    message: errorMsg,
-                    preferredStyle: .alert
-                )
-                alert.addAction(
-                    UIAlertAction(
-                        title: Constants.failureAlertOk,
-                        style: .default,
-                        handler: nil
-                    )
-                )
-                weakSelf?.present(alert, animated: true)
+                DispatchQueue.performOnMainThread({
+                    weakSelf?.progressService.hideLoader(complition: {
+                        weakSelf?.progressService.showErrorAlert(message: errorMsg)
+                    })
+                })
             },
             initInterface: {
-                weakSelf?.showLoaderView()
-            },
-            finalizeInterface: {
-                weakSelf?.hideLoaderView()
+                weakSelf?.progressService.showLoader()
             }
         )
     }
@@ -108,8 +99,8 @@ class MainViewController: UIViewController {
                 TransactionViewCellModel(
                     partnerName: item.partnerDisplayName,
                     description: item.transactionDetail.description ?? .emptySpace,
-                    date: dateTuple.0,
-                    dateString: dateTuple.1,
+                    date: dateTuple.0 ?? Date.distantPast,
+                    dateString: dateTuple.1 ?? .emptySpace,
                     amount: item.transactionDetail.value.amount,
                     currency: item.transactionDetail.value.currency,
                     category: item.category
@@ -130,8 +121,8 @@ class MainViewController: UIViewController {
                 TransactionViewCellModel(
                     partnerName: item.partnerDisplayName,
                     description: item.transactionDetail.description ?? .emptySpace,
-                    date: dateTuple.0,
-                    dateString: dateTuple.1,
+                    date: dateTuple.0 ?? Date.distantPast,
+                    dateString: dateTuple.1 ?? .emptySpace,
                     amount: item.transactionDetail.value.amount,
                     currency: item.transactionDetail.value.currency,
                     category: item.category
@@ -153,10 +144,13 @@ class MainViewController: UIViewController {
         tableView.register(UINib(nibName: Constants.cellReuseIdentifier,bundle: nil), forCellReuseIdentifier: Constants.cellReuseIdentifier)
     }
 
-    private func formatDate(string: String) -> (Date, String) {
+    private func formatDate(string: String) -> (Date?, String?) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = Constants.responseDateFormat
-        let date = dateFormatter.date(from: string)!
+
+        guard let date = dateFormatter.date(from: string) else {
+            return (nil, nil)
+        }
         dateFormatter.dateFormat = Constants.dateFormat
         let resultString = dateFormatter.string(from: date)
 

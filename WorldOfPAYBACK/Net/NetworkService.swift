@@ -12,8 +12,7 @@ protocol NetworkHelperProtocol {
     func getTransactions(
         success: @escaping (TransactionsEntityProtocol) -> Void,
         failure: @escaping ((String) -> Void),
-        initInterface: @escaping (() -> Void),
-        finalizeInterface: @escaping (() -> Void)
+        initInterface: @escaping (() -> Void)
     )
 }
 
@@ -22,8 +21,7 @@ class NetworkService: NetworkHelperProtocol {
     func getTransactions(
         success: @escaping (TransactionsEntityProtocol) -> Void,
         failure: @escaping ((String) -> Void),
-        initInterface: @escaping (() -> Void),
-        finalizeInterface: @escaping (() -> Void)
+        initInterface: @escaping (() -> Void)
     ) {
 
         initInterface()
@@ -31,20 +29,15 @@ class NetworkService: NetworkHelperProtocol {
             let session = URLSession(configuration: .default)
             let url = URL(fileURLWithPath: "https://api.payback.com/transactions")
             let dataTask = session.dataTask(with: url) { data, response, error in
-                
                 guard let data = data,
                       let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
                       let object = Mapper<PBTransactionsOM>().map(JSON: json) else {
-                          DispatchQueue.main.async {
-                              finalizeInterface()
-                              failure(error?.localizedDescription ?? .empty)
-                          }
-                          return
-                      }
-
+                    failure(error?.localizedDescription ?? .empty)
+                    return
+                }
+                
                 DispatchQueue.main.async {
                     success(object)
-                    finalizeInterface()
                 }
             }
             dataTask.resume()

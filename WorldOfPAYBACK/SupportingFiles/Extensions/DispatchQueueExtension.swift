@@ -1,0 +1,21 @@
+//
+//  DispatchQueueExtension.swift
+//  WorldOfPAYBACK
+//
+//  Created by Slava Korolevich on 27.10.22.
+//
+
+import Foundation
+
+public extension DispatchQueue {
+
+    static func performOnMainThread(_ action: () -> ()) {
+        if Thread.isMainThread {
+            action()
+        } else {
+            DispatchQueue.main.sync {
+                action()
+            }
+        }
+    }
+}

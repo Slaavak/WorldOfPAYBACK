@@ -15,6 +15,21 @@
 		560D60232909E53400B59F9E /* NetworkServiceMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8B25290943D700AB5733 /* NetworkServiceMocked.swift */; };
 		560D60262909F4CC00B59F9E /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D60252909F4CC00B59F9E /* CGFloatExtensions.swift */; };
 		560D60282909F4D400B59F9E /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D60272909F4D400B59F9E /* UIColorExtensions.swift */; };
+		560D602A290A8B1D00B59F9E /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D6029290A8B1D00B59F9E /* ProgressService.swift */; };
+		560D602C290A8F6E00B59F9E /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D602B290A8F6E00B59F9E /* DispatchQueueExtension.swift */; };
+		560D602E290A9FC500B59F9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D602D290A9FC500B59F9E /* Constants.swift */; };
+		560D602F290A9FC900B59F9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D602D290A9FC500B59F9E /* Constants.swift */; };
+		560D6031290AA05F00B59F9E /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D602B290A8F6E00B59F9E /* DispatchQueueExtension.swift */; };
+		560D6032290AA06100B59F9E /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D60272909F4D400B59F9E /* UIColorExtensions.swift */; };
+		560D6033290AA06300B59F9E /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D60252909F4CC00B59F9E /* CGFloatExtensions.swift */; };
+		560D6034290AA06500B59F9E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8B172908939300AB5733 /* StringExtensions.swift */; };
+		560D6035290AA06A00B59F9E /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D6029290A8B1D00B59F9E /* ProgressService.swift */; };
+		560D6036290AA09D00B59F9E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8B1B2908995400AB5733 /* LoaderView.swift */; };
+		560D6037290AA0A200B59F9E /* TransactionsEntityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D60172909E3D700B59F9E /* TransactionsEntityProtocol.swift */; };
+		560D6038290AA0A700B59F9E /* PBTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D60192909E3F100B59F9E /* PBTransaction.swift */; };
+		560D6039290AA0AA00B59F9E /* PBAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D601B2909E3F900B59F9E /* PBAlias.swift */; };
+		560D603A290AA0AB00B59F9E /* PBTransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D601D2909E40000B59F9E /* PBTransactionDetail.swift */; };
+		560D603B290AA0AD00B59F9E /* PBValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D601F2909E40500B59F9E /* PBValue.swift */; };
 		564C8A9B2906A5E800AB5733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8A9A2906A5E800AB5733 /* AppDelegate.swift */; };
 		564C8A9F2906A5E800AB5733 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8A9E2906A5E800AB5733 /* MainViewController.swift */; };
 		564C8AA42906A5E900AB5733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564C8AA32906A5E900AB5733 /* Assets.xcassets */; };
@@ -95,6 +110,9 @@
 		560D601F2909E40500B59F9E /* PBValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBValue.swift; sourceTree = "<group>"; };
 		560D60252909F4CC00B59F9E /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 		560D60272909F4D400B59F9E /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		560D6029290A8B1D00B59F9E /* ProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressService.swift; sourceTree = "<group>"; };
+		560D602B290A8F6E00B59F9E /* DispatchQueueExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtension.swift; sourceTree = "<group>"; };
+		560D602D290A9FC500B59F9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		564C8A972906A5E800AB5733 /* WorldOfPAYBACK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564C8A9A2906A5E800AB5733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		564C8A9E2906A5E800AB5733 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +220,17 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		560D6030290AA04E00B59F9E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				564C8B172908939300AB5733 /* StringExtensions.swift */,
+				560D60252909F4CC00B59F9E /* CGFloatExtensions.swift */,
+				560D60272909F4D400B59F9E /* UIColorExtensions.swift */,
+				560D602B290A8F6E00B59F9E /* DispatchQueueExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		564C8A8E2906A5E800AB5733 = {
 			isa = PBXGroup;
 			children = (
@@ -228,9 +257,7 @@
 		564C8A992906A5E800AB5733 /* WorldOfPAYBACK */ = {
 			isa = PBXGroup;
 			children = (
-				564C8B172908939300AB5733 /* StringExtensions.swift */,
-				560D60252909F4CC00B59F9E /* CGFloatExtensions.swift */,
-				560D60272909F4D400B59F9E /* UIColorExtensions.swift */,
+				560D6029290A8B1D00B59F9E /* ProgressService.swift */,
 				560D60222909E52B00B59F9E /* Net */,
 				564C8B1D290899F300AB5733 /* UIComponents */,
 				564C8AD22906AF6300AB5733 /* Entities */,
@@ -282,6 +309,8 @@
 			children = (
 				564C8AA52906A5E900AB5733 /* LaunchScreen.storyboard */,
 				564C8A9A2906A5E800AB5733 /* AppDelegate.swift */,
+				560D602D290A9FC500B59F9E /* Constants.swift */,
+				560D6030290AA04E00B59F9E /* Extensions */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -638,11 +667,14 @@
 				560D60202909E40500B59F9E /* PBValue.swift in Sources */,
 				560D60282909F4D400B59F9E /* UIColorExtensions.swift in Sources */,
 				564C8B26290943D700AB5733 /* NetworkServiceMocked.swift in Sources */,
+				560D602E290A9FC500B59F9E /* Constants.swift in Sources */,
 				564C8AD42906B12100AB5733 /* PBTransactionOM.swift in Sources */,
+				560D602A290A8B1D00B59F9E /* ProgressService.swift in Sources */,
 				564C8B23290935DC00AB5733 /* NetworkMonitor.swift in Sources */,
 				560D60182909E3D700B59F9E /* TransactionsEntityProtocol.swift in Sources */,
 				564C8ADB2906B3DD00AB5733 /* PBValueOM.swift in Sources */,
 				564C8AF729080E0300AB5733 /* PBTransactions.swift in Sources */,
+				560D602C290A8F6E00B59F9E /* DispatchQueueExtension.swift in Sources */,
 				564C8AED2907DE6B00AB5733 /* TransactionViewCell.swift in Sources */,
 				564C8A9B2906A5E800AB5733 /* AppDelegate.swift in Sources */,
 				564C8AD72906B26400AB5733 /* PBAliasOM.swift in Sources */,
@@ -676,22 +708,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560D6035290AA06A00B59F9E /* ProgressService.swift in Sources */,
 				564C8AFB2908537A00AB5733 /* NetworkService.swift in Sources */,
+				560D6036290AA09D00B59F9E /* LoaderView.swift in Sources */,
+				560D602F290A9FC900B59F9E /* Constants.swift in Sources */,
 				560D60232909E53400B59F9E /* NetworkServiceMocked.swift in Sources */,
+				560D6034290AA06500B59F9E /* StringExtensions.swift in Sources */,
 				564C8AFC2908537A00AB5733 /* TransactionViewCellModel.swift in Sources */,
 				564C8AFD2908537A00AB5733 /* PBTransactionDetailOM.swift in Sources */,
 				564C8AFE2908537A00AB5733 /* MappableHelper.swift in Sources */,
+				560D6032290AA06100B59F9E /* UIColorExtensions.swift in Sources */,
+				560D603A290AA0AB00B59F9E /* PBTransactionDetail.swift in Sources */,
 				564C8AFF2908537A00AB5733 /* MainViewController.swift in Sources */,
 				564C8B002908537A00AB5733 /* PBTransactionOM.swift in Sources */,
 				564C8B022908537A00AB5733 /* PBValueOM.swift in Sources */,
 				568ED2022909789F0097601C /* TransactionDetailViewController.swift in Sources */,
+				560D6037290AA0A200B59F9E /* TransactionsEntityProtocol.swift in Sources */,
 				564C8B242909360400AB5733 /* NetworkMonitor.swift in Sources */,
 				564C8B032908537A00AB5733 /* PBTransactions.swift in Sources */,
 				564C8B042908537A00AB5733 /* TransactionViewCell.swift in Sources */,
+				560D6033290AA06300B59F9E /* CGFloatExtensions.swift in Sources */,
 				564C8B052908537A00AB5733 /* AppDelegate.swift in Sources */,
 				564C8B062908537A00AB5733 /* PBAliasOM.swift in Sources */,
 				564C8B072908537A00AB5733 /* PBTransactionsOM.swift in Sources */,
+				560D6039290AA0AA00B59F9E /* PBAlias.swift in Sources */,
 				564C8B082908537A00AB5733 /* TransactionsArrayTransform.swift in Sources */,
+				560D6031290AA05F00B59F9E /* DispatchQueueExtension.swift in Sources */,
+				560D6038290AA0A700B59F9E /* PBTransaction.swift in Sources */,
+				560D603B290AA0AD00B59F9E /* PBValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
