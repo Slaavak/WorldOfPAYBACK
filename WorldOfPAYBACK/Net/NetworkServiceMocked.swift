@@ -18,7 +18,7 @@ class NetworkServiceMocked: NetworkHelperProtocol {
     ) {
         initInterface()
         DispatchQueue.global().asyncAfter(deadline: delaySimulation) {
-            if let url = Bundle.main.url(forResource: "PBTransactions", withExtension: "json") {
+            if let url = Bundle.main.url(forResource: Constants.fileName, withExtension: Constants.fileExtension) {
                 do {
                     let data = try Data(contentsOf: url)
                     let decoder = JSONDecoder()
@@ -28,10 +28,18 @@ class NetworkServiceMocked: NetworkHelperProtocol {
                     }
                 } catch {
                     DispatchQueue.performOnMainThread {
-                        failure("error:\(error)")
+                        failure(Constants.errorString + "\(error)")
                     }
                 }
             }
         }
+    }
+
+    //MARK: - Constants
+
+    private enum Constants {
+        static let fileName = "PBTransactions"
+        static let fileExtension = "json"
+        static let errorString = "error:"
     }
 }

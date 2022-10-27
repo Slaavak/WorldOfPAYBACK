@@ -6,7 +6,6 @@
 //
 
 import ObjectMapper
-import Foundation
 
 protocol NetworkHelperProtocol {
     func getTransactions(
@@ -27,7 +26,7 @@ class NetworkService: NetworkHelperProtocol {
         initInterface()
         DispatchQueue.global().async {
             let session = URLSession(configuration: .default)
-            let url = URL(fileURLWithPath: "https://api.payback.com/transactions")
+            let url = URL(fileURLWithPath: Constants.url)
             let dataTask = session.dataTask(with: url) { data, response, error in
                 guard let data = data,
                       let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
@@ -42,5 +41,11 @@ class NetworkService: NetworkHelperProtocol {
             }
             dataTask.resume()
         }
+    }
+
+    //MARK: - Constants
+
+    private enum Constants {
+        static let url = "https://api.payback.com/transactions"
     }
 }
