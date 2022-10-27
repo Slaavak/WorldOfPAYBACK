@@ -11,8 +11,8 @@ class TransactionDetailViewController: UIViewController {
 
     //MARK: - Outlets
 
-    @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var titleNameLabel: UILabel!
+    @IBOutlet private weak var descriptionTextView: UITextView!
+    @IBOutlet private weak var titleNameLabel: UILabel!
 
     //MARK: - Properties
 

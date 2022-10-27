@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,23 +18,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tX-z1-VLX">
-                                <rect key="frame" x="16" y="831" width="382" height="31"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <rect key="frame" x="16" y="827.5" width="382" height="34.5"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="get transactions"/>
                                 <connections>
                                     <action selector="didTapBottomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jNj-be-wSw"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="joD-IU-o1I">
-                                <rect key="frame" x="0.0" y="102" width="414" height="713"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="joD-IU-o1I">
+                                <rect key="frame" x="0.0" y="106" width="414" height="705.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTj-7a-uti">
-                                <rect key="frame" x="0.0" y="44" width="414" height="58"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="58"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8go-rI-peB">
-                                        <rect key="frame" x="16" y="8" width="382" height="34"/>
+                                        <rect key="frame" x="191" y="8" width="32" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -48,8 +50,7 @@
                                 <constraints>
                                     <constraint firstItem="6u5-9t-zl6" firstAttribute="top" secondItem="8go-rI-peB" secondAttribute="bottom" constant="8" id="9pi-e3-92m"/>
                                     <constraint firstAttribute="bottom" secondItem="6u5-9t-zl6" secondAttribute="bottom" constant="8" id="EFP-kS-z4u"/>
-                                    <constraint firstAttribute="trailing" secondItem="8go-rI-peB" secondAttribute="trailing" constant="16" id="V4G-6z-cJX"/>
-                                    <constraint firstItem="8go-rI-peB" firstAttribute="leading" secondItem="FTj-7a-uti" secondAttribute="leading" constant="16" id="cCt-1G-VBh"/>
+                                    <constraint firstItem="8go-rI-peB" firstAttribute="centerX" secondItem="FTj-7a-uti" secondAttribute="centerX" id="NVM-Io-n5e"/>
                                     <constraint firstItem="8go-rI-peB" firstAttribute="top" secondItem="FTj-7a-uti" secondAttribute="top" constant="8" id="dHi-tP-nZs"/>
                                     <constraint firstAttribute="trailing" secondItem="6u5-9t-zl6" secondAttribute="trailing" constant="16" id="eAa-jk-1j8"/>
                                     <constraint firstItem="6u5-9t-zl6" firstAttribute="leading" secondItem="FTj-7a-uti" secondAttribute="leading" constant="16" id="fkh-Du-INo"/>
@@ -74,6 +75,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomButtonOutlet" destination="1tX-z1-VLX" id="BJg-iN-GFd"/>
+                        <outlet property="headerView" destination="FTj-7a-uti" id="3mH-ce-mBm"/>
                         <outlet property="pickerViewTextField" destination="8go-rI-peB" id="Y1A-LL-fw7"/>
                         <outlet property="tableView" destination="joD-IU-o1I" id="qNY-Mj-ZYa"/>
                         <outlet property="transactionsValueAmountLabel" destination="6u5-9t-zl6" id="eZc-jT-ygR"/>
@@ -91,8 +93,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

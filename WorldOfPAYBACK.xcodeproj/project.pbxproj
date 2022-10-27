@@ -13,6 +13,8 @@
 		560D601E2909E40000B59F9E /* PBTransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D601D2909E40000B59F9E /* PBTransactionDetail.swift */; };
 		560D60202909E40500B59F9E /* PBValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D601F2909E40500B59F9E /* PBValue.swift */; };
 		560D60232909E53400B59F9E /* NetworkServiceMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8B25290943D700AB5733 /* NetworkServiceMocked.swift */; };
+		560D60262909F4CC00B59F9E /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D60252909F4CC00B59F9E /* CGFloatExtensions.swift */; };
+		560D60282909F4D400B59F9E /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D60272909F4D400B59F9E /* UIColorExtensions.swift */; };
 		564C8A9B2906A5E800AB5733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8A9A2906A5E800AB5733 /* AppDelegate.swift */; };
 		564C8A9F2906A5E800AB5733 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C8A9E2906A5E800AB5733 /* MainViewController.swift */; };
 		564C8AA42906A5E900AB5733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564C8AA32906A5E900AB5733 /* Assets.xcassets */; };
@@ -91,6 +93,8 @@
 		560D601B2909E3F900B59F9E /* PBAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBAlias.swift; sourceTree = "<group>"; };
 		560D601D2909E40000B59F9E /* PBTransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTransactionDetail.swift; sourceTree = "<group>"; };
 		560D601F2909E40500B59F9E /* PBValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBValue.swift; sourceTree = "<group>"; };
+		560D60252909F4CC00B59F9E /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
+		560D60272909F4D400B59F9E /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		564C8A972906A5E800AB5733 /* WorldOfPAYBACK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564C8A9A2906A5E800AB5733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		564C8A9E2906A5E800AB5733 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -224,8 +228,10 @@
 		564C8A992906A5E800AB5733 /* WorldOfPAYBACK */ = {
 			isa = PBXGroup;
 			children = (
-				560D60222909E52B00B59F9E /* Net */,
 				564C8B172908939300AB5733 /* StringExtensions.swift */,
+				560D60252909F4CC00B59F9E /* CGFloatExtensions.swift */,
+				560D60272909F4D400B59F9E /* UIColorExtensions.swift */,
+				560D60222909E52B00B59F9E /* Net */,
 				564C8B1D290899F300AB5733 /* UIComponents */,
 				564C8AD22906AF6300AB5733 /* Entities */,
 				564C8ACA2906A5FC00AB5733 /* ViewControllers */,
@@ -623,12 +629,14 @@
 			files = (
 				564C8ACF2906A6D800AB5733 /* NetworkService.swift in Sources */,
 				564C8AE82907399400AB5733 /* TransactionViewCellModel.swift in Sources */,
+				560D60262909F4CC00B59F9E /* CGFloatExtensions.swift in Sources */,
 				564C8AD92906B33800AB5733 /* PBTransactionDetailOM.swift in Sources */,
 				560D601E2909E40000B59F9E /* PBTransactionDetail.swift in Sources */,
 				564C8AE02906BFD200AB5733 /* MappableHelper.swift in Sources */,
 				568ED2012909789F0097601C /* TransactionDetailViewController.swift in Sources */,
 				564C8A9F2906A5E800AB5733 /* MainViewController.swift in Sources */,
 				560D60202909E40500B59F9E /* PBValue.swift in Sources */,
+				560D60282909F4D400B59F9E /* UIColorExtensions.swift in Sources */,
 				564C8B26290943D700AB5733 /* NetworkServiceMocked.swift in Sources */,
 				564C8AD42906B12100AB5733 /* PBTransactionOM.swift in Sources */,
 				564C8B23290935DC00AB5733 /* NetworkMonitor.swift in Sources */,

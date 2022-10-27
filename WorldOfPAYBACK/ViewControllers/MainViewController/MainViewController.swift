@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var pickerViewTextField: UITextField!
     @IBOutlet private weak var transactionsValueAmountLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var headerView: UIView!
     @IBOutlet private weak var bottomButtonOutlet: UIButton!
 
     //MARK: - Properties
@@ -84,6 +85,10 @@ class MainViewController: UIViewController {
 #else
         networkHelper = NetworkService()
 #endif
+        bottomButtonOutlet.layer.cornerRadius = 10
+        bottomButtonOutlet.layer.masksToBounds = true
+        title = Constants.viewControllerTitle
+        headerView.backgroundColor = Constants.headerBackgroundColor
         pickerView.dataSource = self
         pickerView.delegate = self
         pickerViewTextField.text = transactionsCategory.first ?? .empty
@@ -207,6 +212,13 @@ class MainViewController: UIViewController {
         static let transactionDetailIdentifier = "TransactionDetailViewController"
         static let numberOfSections = 1
         static let numberOfComponents = 1
+        static let viewControllerTitle = "Transactions"
+        static let headerBackgroundColor = UIColor(
+            red: 0.85,
+            green: 0.85,
+            blue: 0.85,
+            alpha: 1
+        )
     }
 }
 
