@@ -9,15 +9,15 @@ import Foundation
 
 public struct PBTransaction: Codable {
 
-    /// Имя
+    /// Partnetr name
     public var partnerDisplayName: String
 
-    /// Псевдоним
+    /// Alias
     public var alias: PBAlias
 
-    /// Категория
+    /// Category
     public var category: Int
 
-    /// Детали транзакции
+    /// Transaction details
     public var transactionDetail: PBTransactionDetail
 }

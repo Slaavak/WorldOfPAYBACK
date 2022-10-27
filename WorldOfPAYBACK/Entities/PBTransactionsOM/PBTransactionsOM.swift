@@ -9,7 +9,7 @@ import ObjectMapper
 
 public class PBTransactionsOM: MappableHelper, TransactionsEntityProtocol {
 
-    /// Транзакции
+    /// Transactions
     public private(set) var items: [PBTransactionOM]
 
     public required init(map: Map) throws {

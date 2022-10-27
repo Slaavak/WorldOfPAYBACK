@@ -9,13 +9,13 @@ import Foundation
 
 public struct PBTransactionDetail: Codable {
 
-    /// Описание
+    /// Description
     public var description: String?
 
-    /// Дата бронирования
+    /// Booking date
     public var bookingDate: String
 
-    /// Стоимость
+    /// Value
     public var value: PBValue
 }
 

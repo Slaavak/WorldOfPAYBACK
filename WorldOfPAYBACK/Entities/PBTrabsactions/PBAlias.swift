@@ -9,7 +9,7 @@ import Foundation
 
 public struct PBAlias: Codable {
 
-    /// Ссылка
+    /// Reference
     public var reference: String
 }
 

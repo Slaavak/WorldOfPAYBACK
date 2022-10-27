@@ -9,16 +9,16 @@ import ObjectMapper
 
 public class PBTransactionOM: MappableHelper {
 
-    /// Имя
+    /// Partnetr name
     public private(set) var partnerDisplayName: String
 
-    /// Псевдоним
+    /// Alias
     public private(set) var alias: PBAliasOM
 
-    /// Категория
+    /// Category
     public private(set) var category: Int
 
-    /// Детали транзакции
+    /// Transaction details
     public private(set) var transactionDetail: PBTransactionDetailOM
 
     required public init(map: Map) throws {

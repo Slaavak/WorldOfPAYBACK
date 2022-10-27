@@ -9,9 +9,9 @@ import Foundation
 
 public struct PBValue: Codable {
 
-    /// Описание
+    /// Amount
     public var amount: Int
 
-    /// Дата бронирования
+    /// Currency
     public var currency: String
 }

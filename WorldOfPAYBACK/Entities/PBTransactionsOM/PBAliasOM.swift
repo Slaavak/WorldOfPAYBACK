@@ -9,7 +9,7 @@ import ObjectMapper
 
 public class PBAliasOM: MappableHelper {
 
-    /// Ссылка
+    /// Reference
     public private(set) var reference: String
 
     required public init(map: Map) throws {

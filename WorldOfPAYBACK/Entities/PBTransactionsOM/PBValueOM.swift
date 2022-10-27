@@ -9,10 +9,10 @@ import ObjectMapper
 
 public class PBValueOM: MappableHelper {
 
-    /// Описание
+    /// Amount
     public private(set) var amount: Int
 
-    /// Дата бронирования
+    /// Currency
     public private(set) var currency: String
 
     required public init(map: Map) throws {

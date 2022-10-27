@@ -9,13 +9,13 @@ import ObjectMapper
 
 public class PBTransactionDetailOM: MappableHelper {
 
-    /// Описание
+    /// Description
     public private(set) var description: String?
 
-    /// Дата бронирования
+    /// Booking date
     public private(set) var bookingDate: String
 
-    /// Стоимость
+    /// Value
     public private(set) var value: PBValueOM
 
     required public init(map: Map) throws {

@@ -9,6 +9,6 @@ import Foundation
 
 public struct PBTransactions: Codable, TransactionsEntityProtocol {
     
-    /// Транзакции
+    /// Transactions
     public var items: [PBTransaction]
 }
