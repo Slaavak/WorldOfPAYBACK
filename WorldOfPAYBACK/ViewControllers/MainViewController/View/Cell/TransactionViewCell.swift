@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TransactionViewCell: UITableViewCell {
+final public class TransactionViewCell: UITableViewCell {
 
     //MARK: - Outlets
 
@@ -20,7 +20,7 @@ class TransactionViewCell: UITableViewCell {
 
     //MARK: - Lyfecycle
 
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
 
         decorView.backgroundColor = .random

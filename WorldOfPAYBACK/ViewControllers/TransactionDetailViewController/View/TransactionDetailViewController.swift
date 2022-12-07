@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TransactionDetailViewController: UIViewController {
+public final class TransactionDetailViewController: UIViewController {
 
     //MARK: - Outlets
 
@@ -17,12 +17,18 @@ class TransactionDetailViewController: UIViewController {
     //MARK: - Properties
 
     public var item: TransactionViewCellModel!
+    var output: TransactionDetailPresenterOutput!
 
     //MARK: - Lyfecycle
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         descriptionTextView.text = item.description
         titleNameLabel.text = item.partnerName
     }
+}
+
+// MARK: - TransactionDetailPresenterInput
+
+extension TransactionDetailViewController: TransactionDetailPresenterInput {
 }

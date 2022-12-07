@@ -14,12 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        guard let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? MainViewController else {
-            return true
-        }
 
+        let vc = MainViewControllerWireframe().initMainViewControllerViewController()
         let nc = UINavigationController(rootViewController: vc)
-        vc.progressService = ProgressService(viewController: vc)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = nc
         window?.makeKeyAndVisible()

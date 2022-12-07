@@ -126,7 +126,7 @@
       },
       "category" : 1,
       "transactionDetail" : {
-        "bookingDate" : "2022-02-29T10:59:05+0200",
+        "bookingDate" : "2022-02-27T10:59:05+0200",
         "value" : {
           "amount" : 49,
           "currency" : "PBP"

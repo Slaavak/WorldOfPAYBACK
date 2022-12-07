@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class TransactionViewCellModel {
+public final class TransactionViewCellModel {
 
     //MARK: - Init
 
